@@ -1,0 +1,37 @@
+.paddedDiv {
+    margin: 2vw
+}
+
+.gridContainer {
+    height: 20vt;
+}
+
+#chipsPaper {
+    border: 0;
+    background-color: inherit;
+    box-shadow: none;
+    width: 76vw;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    margin-left: 6vw;
+    margin-right: 6vw;
+}
+
+#namesInput {
+    width: 76vw;
+}
+
+.centreGridCell {
+    display: flex;
+    align-items: flex-start;
+}
+
+.marginedHR {
+    margin-bottom: 36px;
+}
+
+#pickedName {
+    margin: auto;
+    margin-top: 10vh;
+    font-size: 4em;
+}

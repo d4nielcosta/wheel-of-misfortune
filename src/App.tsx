@@ -1,24 +1,19 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import NameSelector from './name-selector';
+import Card from '@mui/material/Card';
 
 function App() {
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Card className="outerCard">
+        <h1>Wheel of Misfortune</h1>
+        <NameSelector />
+      </Card>
+      <Card className="footer">
+        <p> Developed by <a href="https://github.com/d4nielcosta">Daniel Costa</a></p>
+      </Card>
     </div>
   );
 }
