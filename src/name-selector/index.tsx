@@ -5,8 +5,12 @@ import Paper from '@mui/material/Paper';
 import Avatar from '@mui/material/Avatar';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
+import Switch from '@mui/material/Switch';
 
 import './index.css';
+import FormGroup from '@mui/material/FormGroup';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import Grid from '@mui/material/Grid';
 
 interface ChipData {
     key: string;
@@ -20,14 +24,16 @@ const ListItem = styled('li')(({ theme }) => ({
 export default function ChipsArray() {
     const [chips, setChips] = React.useState<any[]>([]);
     const [nameToAdd, setNameToAdd] = React.useState(String);
-    const [namePicked, setNamePicked] = React.useState(String);
+    const [deleteOnPickToggle, setDeleteOnPickToggle] = React.useState(false);
+    const [namePicked, setNamePicked] = React.useState<ChipData | undefined>();
 
     const handleDelete = (chipToDelete: ChipData) => () => {
-        setChips((chips) => chips.filter((chip) => chip.key !== chipToDelete.key));
+        if (chipToDelete) {
+            setChips((chips) => chips.filter((chip) => chip.key !== chipToDelete.key));
+        }
     };
 
     const onKeyPress = (key: React.Key) => {
-        console.log(nameToAdd);
         if (key === 'Enter') {
             setChips((chips) => {
                 return [...chips, { key: nameToAdd, label: nameToAdd }];
@@ -38,7 +44,11 @@ export default function ChipsArray() {
     }
 
     const pickAName = () => {
-        setNamePicked(chips[Math.floor(Math.random() * chips.length)].label);
+        let pickedName = chips[Math.floor(Math.random() * chips.length)];
+        setNamePicked(pickedName);
+        if (deleteOnPickToggle) {
+            setChips((chips) => chips.filter((chip) => chip.key !== pickedName.key));
+        }
     };
 
     return (
@@ -75,9 +85,21 @@ export default function ChipsArray() {
             </Paper>
 
             <hr className="marginedHR" />
-            <Button variant="contained" size="large" onClick={pickAName}> Pick a Name </Button>
+
+            <Grid container>
+            <Grid item xs={6}>
+                    <FormGroup>
+                        <FormControlLabel control={<Switch />} label="Delete name on getting picked" labelPlacement="start" checked={deleteOnPickToggle} onChange={e => setDeleteOnPickToggle(!deleteOnPickToggle)} />
+                    </FormGroup>
+                </Grid>
+                <Grid item xs={4}>
+                    <Button variant="contained" size="large" onClick={pickAName}> Pick a Name </Button>
+                </Grid>
+                
+            </Grid>
             <div className='centreGridCell'>
-                <h1 id='pickedName'>{namePicked}</h1>
+
+                <h1 id='pickedName'>{namePicked ? namePicked.label : ""}</h1>
             </div>
 
         </div >
