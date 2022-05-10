@@ -3,8 +3,8 @@ import './App.css';
 import NameSelector from './name-selector';
 import Card from '@mui/material/Card';
 
-function App() {
 
+function App() {
   return (
     <div className="App">
       <Card className="outerCard">

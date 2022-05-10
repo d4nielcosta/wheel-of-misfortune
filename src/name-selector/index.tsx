@@ -17,6 +17,22 @@ interface ChipData {
     label: string;
 }
 
+const others = [
+    { key: 'Aisha', label: 'Aisha' },
+    { key: 'Anna', label: 'Anna' },
+    { key: 'Kirstin', label: 'Kirstin' }
+]
+
+const engineers = [
+    { key: 'Alan', label: 'Alan' },
+    { key: 'Callum', label: 'Callum' },
+    { key: 'Danny', label: 'Danny' },
+    { key: 'Kevin', label: 'Kevin' },
+    { key: 'Mani', label: 'Mani' },
+    { key: 'Paddy', label: 'Paddy' },
+    { key: 'Rafal', label: 'Rafal' }
+]
+
 const ListItem = styled('li')(({ theme }) => ({
     margin: theme.spacing(0.5),
 }));
@@ -26,6 +42,18 @@ export default function ChipsArray() {
     const [nameToAdd, setNameToAdd] = React.useState(String);
     const [deleteOnPickToggle, setDeleteOnPickToggle] = React.useState(false);
     const [namePicked, setNamePicked] = React.useState<ChipData | undefined>();
+
+    React.useEffect(() => {
+        console.log('here');
+        switch(window.location.pathname) {
+            case '/ncds':
+                setChips([...engineers, ...others]);
+                break;
+            case '/ncdse':
+                setChips([...engineers]);
+                break;
+        }  
+      }, []);
 
     const handleDelete = (chipToDelete: ChipData) => () => {
         if (chipToDelete) {
