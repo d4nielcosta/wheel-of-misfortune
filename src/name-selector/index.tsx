@@ -44,12 +44,11 @@ export default function ChipsArray() {
     const [namePicked, setNamePicked] = React.useState<ChipData | undefined>();
 
     React.useEffect(() => {
-        console.log('here');
-        switch(window.location.pathname) {
-            case '/ncds':
+        switch(window.location.search) {
+            case '?ncds':
                 setChips([...engineers, ...others]);
                 break;
-            case '/ncdse':
+            case '?ncdse':
                 setChips([...engineers]);
                 break;
         }  
