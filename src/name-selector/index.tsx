@@ -25,6 +25,7 @@ const others = [
 
 const engineers = [
     { key: 'Alan', label: 'Alan' },
+    { key: 'Analben', label: 'Analben'},
     { key: 'Callum', label: 'Callum' },
     { key: 'Danny', label: 'Danny' },
     { key: 'Kevin', label: 'Kevin' },
@@ -125,7 +126,6 @@ export default function ChipsArray() {
                 
             </Grid>
             <div className='centreGridCell'>
-
                 <h1 id='pickedName'>{namePicked ? namePicked.label : ""}</h1>
             </div>
 

@@ -12,7 +12,7 @@ function App() {
         <NameSelector />
       </Card>
       <Card className="footer">
-        <p> Developed by <a href="https://github.com/d4nielcosta">Daniel Costa</a></p>
+        <p>Developed by <a href="https://github.com/d4nielcosta">Daniel Costa</a></p>
       </Card>
     </div>
   );
