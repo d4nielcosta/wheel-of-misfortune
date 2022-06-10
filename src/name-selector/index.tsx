@@ -20,7 +20,8 @@ interface ChipData {
 const others = [
     { key: 'Aisha', label: 'Aisha' },
     { key: 'Anna', label: 'Anna' },
-    { key: 'Kirstin', label: 'Kirstin' }
+    { key: 'Kirstin', label: 'Kirstin' },
+    { key: 'JP', label: 'JP' }
 ]
 
 const engineers = [
