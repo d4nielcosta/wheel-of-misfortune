@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/wheel-of-misfortune/static/css/main.9ec2ad06.css",
-    "main.js": "/wheel-of-misfortune/static/js/main.fd6337a3.js",
+    "main.js": "/wheel-of-misfortune/static/js/main.ae82b278.js",
     "static/js/787.e01c2b7d.chunk.js": "/wheel-of-misfortune/static/js/787.e01c2b7d.chunk.js",
     "index.html": "/wheel-of-misfortune/index.html",
     "main.9ec2ad06.css.map": "/wheel-of-misfortune/static/css/main.9ec2ad06.css.map",
-    "main.fd6337a3.js.map": "/wheel-of-misfortune/static/js/main.fd6337a3.js.map",
+    "main.ae82b278.js.map": "/wheel-of-misfortune/static/js/main.ae82b278.js.map",
     "787.e01c2b7d.chunk.js.map": "/wheel-of-misfortune/static/js/787.e01c2b7d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9ec2ad06.css",
-    "static/js/main.fd6337a3.js"
+    "static/js/main.ae82b278.js"
   ]
 }
