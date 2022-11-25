@@ -20,8 +20,10 @@ interface ChipData {
 const others = [
     { key: 'Aisha', label: 'Aisha' },
     { key: 'Anna', label: 'Anna' },
-    { key: 'Kirstin', label: 'Kirstin' },
-    { key: 'JP', label: 'JP' }
+    { key: 'Fraser', label: 'Fraser' },
+    { key: 'JP', label: 'JP' },
+    { key: 'Kevin', label: 'Kevin' },
+    { key: 'Mani', label: 'Mani' }
 ]
 
 const engineers = [
@@ -29,8 +31,6 @@ const engineers = [
     { key: 'Analben', label: 'Analben'},
     { key: 'Callum', label: 'Callum' },
     { key: 'Danny', label: 'Danny' },
-    { key: 'Kevin', label: 'Kevin' },
-    { key: 'Mani', label: 'Mani' },
     { key: 'Paddy', label: 'Paddy' },
     { key: 'Rafal', label: 'Rafal' }
 ]
