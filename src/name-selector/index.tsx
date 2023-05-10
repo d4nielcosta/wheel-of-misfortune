@@ -18,9 +18,10 @@ interface ChipData {
 }
 
 const others = [
-    { key: 'Aisha', label: 'Aisha' },
     { key: 'Anna', label: 'Anna' },
-    { key: 'Fraser', label: 'Fraser' },
+    { key: 'Scott', label: 'Scott' },
+    { key: 'Ross', label: 'Ross' },
+    { key: 'Kalum', label: 'Kalum' },
     { key: 'JP', label: 'JP' },
     { key: 'Kevin', label: 'Kevin' },
     { key: 'Mani', label: 'Mani' }
@@ -52,6 +53,16 @@ export default function ChipsArray() {
                 break;
             case '?ncdse':
                 setChips([...engineers]);
+                break;
+            default:
+                if (window.location.search.startsWith("?")) {
+                    const searchNames = (window.location.search).substring(1).split(",");
+                    const names = new Array();
+                    searchNames.forEach( (name) => {
+                        names.push({"key": name, "label": name});
+                    })
+                    setChips([...names]);
+                }
                 break;
         }  
       }, []);
